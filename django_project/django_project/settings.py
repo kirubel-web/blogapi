@@ -54,7 +54,7 @@ REST_FRAMEWORK = {
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware'
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -67,7 +67,7 @@ CORS_ORIGIN_WHITELIST = (
     "http://localhost:8000",
 )
 
-CSFR_TRUSTED_ORIGINS = ["http://localhost:3000"]
+
 
 ROOT_URLCONF = 'django_project.urls'
 
@@ -143,3 +143,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
+
+CSFR_TRUSTED_ORIGINS = ["http://localhost:3000"]
